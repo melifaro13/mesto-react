@@ -61,20 +61,17 @@ function App() {
           title={'Обновить аватар'}
           form={'editAvatarForm'} 
           buttonText={'Сохранить'}  
-          children={(
-            <>
-              <input
-                    type="url"
-                    name="avatar"
-                    className="form__info form__info_type_avatar"
-                    id="avatar"
-                    required
-                    placeholder='Ссылка на аватар'
-              />
+          >
+            <input
+                  type="url"
+                  name="avatar"
+                  className="form__info form__info_type_avatar"
+                  id="avatar"
+                  required
+                  placeholder='Ссылка на аватар'
+            />
               <span className="avatar-error form__info-error"></span>
-            </>
-          )}
-          />
+          </PopupWithForm>
 
           <PopupWithForm 
             isOpen={isEditProfilePopupOpen}
@@ -84,9 +81,8 @@ function App() {
             title={'Редактировать профиль'}
             form={'editProfileForm'}
             buttonText={'Сохранить'}
-            children={(
-              <>
-                <input
+            >
+              <input
                     type="text"
                     name="name"
                     className="form__info form__info_type_name"
@@ -95,9 +91,9 @@ function App() {
                     placeholder='Имя'
                     minLength="2"
                     maxLength="40"
-                />
-                <span className="name-error form__info-error"></span>
-                <input
+              />
+              <span className="name-error form__info-error"></span>
+              <input
                     type="text"
                     name="about"
                     className="form__info form__info_type_job"
@@ -106,11 +102,10 @@ function App() {
                     placeholder='О себе'
                     minLength="2"
                     maxLength="200"
-                />
-                <span className="job-error form__info-error"></span>
-              </>
-            )}
-          />
+              />
+              <span className="job-error form__info-error"></span>
+          </PopupWithForm>
+
           <PopupWithForm 
             isOpen={isAddPlacePopupOpen}
             onClose={closePopups}
@@ -119,9 +114,8 @@ function App() {
             title={'Новое место'}
             form={'addCardForm'}
             buttonText={'Создать'}
-            children={(
-              <>
-                <input
+          >
+              <input
                     type="text"
                     name="place"
                     className="form__info form__info_type_place"
@@ -130,20 +124,18 @@ function App() {
                     placeholder='Название'
                     minLength="2"
                     maxLength="20"
-                />
-                <span className="place-error form__info-error"></span>
-                <input
+              />
+              <span className="place-error form__info-error"></span>
+              <input
                     type="url"
                     name="link"
                     className="form__info form__info_type_link"
                     id="link"
                     required
                     placeholder='Ссылка на картинку'
-                />
-                <span className="link-error form__info-error"></span>
-              </>
-            )}
-          />
+              />
+              <span className="link-error form__info-error"></span>
+            </PopupWithForm>
 
           <ImagePopup 
             card={selectedCard}  
