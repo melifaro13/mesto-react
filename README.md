@@ -6,7 +6,7 @@
 ## Используемые приемы для создания проекта:
 + *Основы React*
 + *Create React App*
-+ *Хуки: useState, useEffect*
++ *Хуки: useState, useEffect, useRef*
 
 
 ### Ссылка на GitHub Pages
